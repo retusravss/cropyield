@@ -1,0 +1,87 @@
+.header{
+    color: black;
+    padding:20px;
+    margin-top: 0;
+    text-align: center;
+    font-size: xx-large;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("https://t3.ftcdn.net/jpg/09/57/80/90/360_F_957809002_OjKjBtv6m7oOVtgGgZ4EKYQvaHPacXQ3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Soft white border */
+    margin-left: 410px;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: black;
+}
+
+input[type="text"], input[type="number"] {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Subtle border for inputs */
+    border-radius: 8px;
+    color: brown;
+    padding: 10px;
+    width: 100%;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    outline: none;
+    border-color: #66c2ff; /* Highlight border on focus */
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+button {
+    background-color: white;
+    border: none;
+    color: orange;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    background-color:black;
+}
+.mt-5{
+    color: white;
+}
+/* Result container styling similar to the form */
+#result-container {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 400px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Soft white border */
+    margin-left: 410px;
+}
+#result-container p {
+    color: white;
+    font-size: 1.1rem;
+}
+#result-container h3 {
+    color: white;
+    font-size: 1.3rem;
+}

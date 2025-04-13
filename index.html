@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Yield Prediction</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="header">Crop Yield Prediction</h2>
+        
+        <!-- Form Container -->
+        <div id="form-container">
+            <form method="POST" action="/predict">
+                <div class="form-group">
+                    <label for="Season">Crop Season:</label>
+                    <input type="text" class="form-control" id="Season" name="Season">
+                </div>
+                <div class="form-group">
+                    <label for="State">State:</label>
+                    <input type="text" class="form-control" id="State" name="State">
+                </div>
+                <div class="form-group">
+                    <label for="Crop">Crop:</label>
+                    <input type="text" class="form-control" id="Crop" name="Crop">
+                </div>
+                <div class="form-group">
+                    <label for="pH">Soil Quality (pH):</label>
+                    <input type="number" class="form-control" id="pH" name="pH" step="0.1">
+                </div>
+                <div class="form-group">
+                    <label for="Rainfall">Rainfall (mm):</label>
+                    <input type="number" class="form-control" id="Rainfall" name="Rainfall">
+                </div>
+                <div class="form-group">
+                    <label for="Temperature">Temperature (°C):</label>
+                    <input type="number" class="form-control" id="Temperature" name="Temperature">
+                </div>
+                <div class="form-group">
+                    <label for="Area">Area (hectares):</label>
+                    <input type="number" class="form-control" id="Area" name="Area">
+                </div>
+                <button type="submit" class="btn btn-primary">Predict</button>
+            </form>
+        </div>
+
+        <!-- Result Container -->
+        <div id="result-container" class="mt-5">
+            {% if predicted_yield is not none and predicted_production is not none %}
+                <h3>Prediction Results:</h3>
+                <p><strong>Predicted Crop Yield:</strong> {{ predicted_yield }} tons per hectare</p>
+            {% else %}
+                <p>No predictions available. Please submit the form.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
